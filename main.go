@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/nsf/termbox-go"
-	"github.com/thomasboyt/go-selecta/selecta"
-	"github.com/urfave/cli"
 	"os"
 	"os/exec"
 	"strings"
 	"syscall"
 	"unicode"
+
+	"github.com/nsf/termbox-go"
+	"github.com/thomasboyt/go-selecta/selecta"
+	"github.com/urfave/cli"
 )
 
 func main() {
@@ -66,7 +67,7 @@ func goDesk() {
 	if lookErr != nil {
 		panic(lookErr)
 	}
-	args := []string{"desk", "go", search.SelectedChoice()}
+	args := []string{"desk", "go", strings.TrimSpace(search.SelectedChoice())}
 	env := os.Environ()
 	execErr := syscall.Exec(binary, args, env)
 	if execErr != nil {
