@@ -1,0 +1,14 @@
+hash: 22ba65723ccb3dff186af4cd33adb773534a08b0a208086fe773449e361c81f8
+updated: 2017-06-23T03:03:26.594141478-04:00
+imports:
+- name: github.com/mattn/go-runewidth
+  version: 97311d9f7767e3d6f422ea06661bc2c7a19e8a5d
+- name: github.com/nsf/termbox-go
+  version: 72800b73ab9a3c78df350738298b0361354772ff
+- name: github.com/thomasboyt/go-selecta
+  version: 19274973eb13f3bf8be60e113cde7abb58fedb64
+  subpackages:
+  - selecta
+- name: github.com/urfave/cli
+  version: cf33a9befefdd6c6ea1a236ab6d546e797a62cbf
+testImports: []
