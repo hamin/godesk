@@ -1,0 +1,35 @@
+# goreleaser.yml
+# Build customization
+build:
+  binary: godesk
+  goos:
+    - darwin
+    - linux
+  goarch:
+    - amd64
+
+brew:
+  # Reporitory to push the tap to.
+  github:
+    owner: hamin
+    name: godesk
+
+  # Folder inside the repository to put the formula.
+  # Default is the root folder.
+  folder: Formula
+
+  # Caveats for the user of your binary.
+  # Default is empty.
+  # caveats: "How to use this binary"
+
+  # Your app's homepage
+  # Default is empty
+  homepage: "https://github.com/hamin/godesk"
+
+  # Your app's description
+  # Default is empty
+  description: "A quick Desk workspace launcher with fuzzy filtering"
+
+  # Dependencies of your package
+  # dependencies:
+  #   - git
