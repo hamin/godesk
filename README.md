@@ -11,8 +11,16 @@
 
 Install [Desk](https://github.com/jamesob/desk) for your environment
 
-## Installation    
+## Installation Options
 
+#### Homebrew
+
+```shell
+brew tap hamin/godesk https://github.com/hamin/godesk
+brew install godesk
+```    
+
+#### `go get`
 ```shell
   go get -u github.com/hamin/godesk
 ```
