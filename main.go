@@ -67,10 +67,12 @@ func goDesk() {
 	if lookErr != nil {
 		panic(lookErr)
 	}
-	selectedChoice := strings.TrimSpace(search.SelectedChoice())
+	selectedChoice := strings.Split(search.SelectedChoice(), "#")[0]
+	selectedChoice = strings.TrimSpace(selectedChoice)
+
 	args := []string{"desk", "go", selectedChoice}
 	env := os.Environ()
-	fmt.Println("go desk " + selectedChoice)
+	fmt.Println("desk go " + selectedChoice)
 	execErr := syscall.Exec(binary, args, env)
 	if execErr != nil {
 		panic(execErr)
